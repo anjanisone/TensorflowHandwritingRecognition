@@ -1,7 +1,5 @@
 # Handwriting Recognition
 
-NOT MAINTAINED!
-
 ## Introduction
 In this repository I used the [NIST Special Database 19](https://www.nist.gov/srd/nist-special-database-19) and [Tensorflow](https://www.tensorflow.org/) to create a convolutional neural network, which recognizes handwritten digits. It differentiates between 47 classes: All uppercase letters, all numbers and a few lower case letters.I was able to achieve an accuracy of about 87%. If you have any questions, please feel free to open an issue, I will respond to all issues and do my best to help.
 
@@ -10,8 +8,7 @@ I downloaded the database [by_merge.zip](https://s3.amazonaws.com/nist-srd/SD19/
 The script to convert the images can be found in data_handler.main(). After conversion, the arrays are saved as `nist_labels_32x32.npy` and `nist_images_32x32.npy`. The data is now preprocessed and can be fed into the neural network. 
 
 ## The Graph
-Now it's time to define the tensorflow graph. If you are not familiar with tensorflow, I can recommend [this course on udemy.com](https://www.udemy.com/complete-guide-to-tensorflow-for-deep-learning-with-python). I based this AI on that course.
-I have found that a graph like this works very well: 
+Now it's time to define the tensorflow graph. If you are not familiar with tensorflow,  
 1. Convolutional Layer: filter_size: 4x4, filters: 16
 2. Pooling Layer 2x2
 3. Convolutional Layer: filter_size: 4x4, filters: 32
@@ -39,4 +36,4 @@ First I reconstruct the same graph that I used for training, then load the saved
 I made a dictionary that simply has the letter or number as value for each label. Refer to predict.py for more information.
 
 ## Notes
-This Readme doesn't go into very much detail on how the code works. I will answer issues as detailed as I can if you have specific questions, but if you don't know anything about Tensorflow, I can't help you that much. Again, I can really recommend [this course on udemy.com](https://www.udemy.com/complete-guide-to-tensorflow-for-deep-learning-with-python). I am not affiliated with udemy or the creator of this course, but I acquired most of mz know-how from that course. 
+This Readme doesn't go into very much detail on how the code works. I will answer issues as detailed as I can if you have specific questions, but if you don't know anything about Tensorflow, I can't help you that much.
